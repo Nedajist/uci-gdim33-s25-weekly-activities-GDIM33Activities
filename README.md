@@ -8,7 +8,7 @@
 
 
 ### Activity 2
-Put your activity 2 image here. REMOVE THIS INSTRUCTIONAL TEXT.
+<img width="943" height="708" alt="Screenshot 2026-04-01 191558" src="https://github.com/user-attachments/assets/02a086d4-f9f2-43b5-8624-8bac0a2f631d" />
 
 
 ## W2
