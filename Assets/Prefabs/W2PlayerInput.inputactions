@@ -1,0 +1,28 @@
+{
+    "name": "W2PlayerInput",
+    "maps": [
+        {
+            "name": "movement",
+            "id": "59ce4658-96fc-4904-95ff-f1dc020b5984",
+            "actions": [
+                {
+                    "name": "movement",
+                    "type": "Button",
+                    "id": "8211947b-1782-4f0d-9c3b-d7a5b5c1a68d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "New Control Scheme",
+            "bindingGroup": "New Control Scheme",
+            "devices": []
+        }
+    ]
+}
