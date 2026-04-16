@@ -19,3 +19,9 @@ Continue adding additional headers below this one for future weeks and future ac
 ## W3
 ### Activity 1
 <img width="1728" height="1440" alt="GDIM 33 Game Breakdown (1)" src="https://github.com/user-attachments/assets/b4ee4f79-bcc8-40cb-9bd3-1fc3e8a6d7f5" />
+
+### Activity 2
+1. By saving the event name as a Scene variable, the event can be activated from any gameObject in the Scene which has a reference to the gameObject containing the event. If the event name were to change, all objects activating the event would still be able to activate it, as they are storing a reference to the variable containing the name, not the name itself. Saving the event name as a scene variable allows the event to be activated from more gameObjects and improves the program's resiliency.
+2. The Debug.Log nodes for my mouse click and the explore --> dialogue transition let me know that the state transition was broken, as the only the Debug.Log for my mouse click appeared. I knew that the problem was with activating the transition event rather than with how the program handles mouse inputs.
+3. The Set Cursor Lock State is not relevant to my vertical slice. The player's camera is tied to their position, not their cursor, and the player will constantly be moving their cursor to activate abilities. I do not see any scenario in which the cursor ought to be locked.
+4. My vertical slice will likely have 2 game states: class selection and combat. Everything will be frozen during class selection as the player chooses their character, and everything will be enabled and unfrozen during the combat state.
