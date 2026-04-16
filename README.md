@@ -16,6 +16,6 @@ Write your W2 Devlog here.
 
 Continue adding additional headers below this one for future weeks and future activities.
 
-## W2
+## W3
 ### Activity 1
-<img width="1728" height="1440" alt="GDIM 33 Game Breakdown" src="https://github.com/user-attachments/assets/843ee8c6-6637-4a76-b4da-2a5a7c5104ea" />
+<img width="1728" height="1440" alt="GDIM 33 Game Breakdown (1)" src="https://github.com/user-attachments/assets/b4ee4f79-bcc8-40cb-9bd3-1fc3e8a6d7f5" />
