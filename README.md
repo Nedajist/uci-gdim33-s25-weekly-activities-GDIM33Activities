@@ -25,3 +25,10 @@ Continue adding additional headers below this one for future weeks and future ac
 2. The Debug.Log nodes for my mouse click and the explore --> dialogue transition let me know that the state transition was broken, as the only the Debug.Log for my mouse click appeared. I knew that the problem was with activating the transition event rather than with how the program handles mouse inputs.
 3. The Set Cursor Lock State is not relevant to my vertical slice. The player's camera is tied to their position, not their cursor, and the player will constantly be moving their cursor to activate abilities. I do not see any scenario in which the cursor ought to be locked.
 4. My vertical slice will likely have 2 game states: class selection and combat. Everything will be frozen during class selection as the player chooses their character, and everything will be enabled and unfrozen during the combat state.
+
+## W4
+### Activity 1
+Currently I have 3 player classes, each with 1 out of 2 abilities implemented. The boss contains a state machine graph three phases and 9 attacks. Ghost replay for players is working with (I believe) physics frame perfect precision. Past player incarnations move and attack exactly as the player originally did. The boss can infect players with a plague which spreads upon death, raising zombies from dead players. Zombies generally copy the player's class abilities. There is no music or audio or VFX. 
+My playtest goal is to find out just how overtuned the boss currently is. Currently the boss has >10x the HP of the tankiest player class, and I have not been able to defeat it once, even with over 20 past incarnations helping me. Even after repeated nerfs, I believe the boss's movement patterns & stats should still be revised. 
+
+### Activity 2
