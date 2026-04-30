@@ -37,3 +37,16 @@ Playtest Notes: The boss has too much health. One playtester did not even notice
 1. A writer could add more dialogue without writing any code by creating DialogueLineW4 scriptableobject nodes and copy/pasting dialogue into its line and reply options fields. Then they could link lines of dialogue by dragging other line nodes in the reply options section. None of this requires writing code.
 2. A writer could create a theoretically infinite number of dialogue node scriptable objects without scripting, although they would eventually be limited by their computer's storage capacity.
 3. Regenerate nodes refreshes the types of nodes the player is able to create in visual scripting graphs. It is typically used when the programmer creates a new class/method in C# scripts and wants to be able to use them in visual scripting. When new classes/methods are made, Unity doesn't automatically add them as visual scripting nodes, so the player must regenerate them. 
+
+## W5
+### Activity 1
+I have implemented my chosen Unity tool (scriptable objects) and all of my non-VFX vertical slice features, so I will work on improving enemy NPC behavior and presentation. 
+Steps:
+1. Make healthbar of enemies more responsive.
+	1a. Make a central healthbar prefab shared across all characters, instead of characters each having their own distinct healthbar gameobject. I will know it works if, after adding the prefabs to each character, the healthbars still function as before. 
+	1b. Add a black background behind each healthbar so the player can better visualize the amount of missing HP from an enemy. If I can see the black backgrounds behind each health bar, it works. 
+	1c. Make a coroutine which expands, then shrinks, the size of a healthbar when health changes. If I can see the healthbar scales changing while playing, its functional. 
+2. Make enemies avoid colliding into each other, which results in friendly-fire collision damage. 
+    2a. Add a method to the enemy script which executes a physics circlecast and returns a list of all NPCs caught within it. I'll test this by running a debug.log on the returned list and by having enemies spawn close to each other. 
+	2b. Create a method, which, when given a gameobject, creates a normalized vector2 pointing from the gameobject to the enemy NPC. I will debug.log the Vector2's to ensure that they are correct. 
+	2c. Modify the previous method to make the vector2 apply a small force to the enemy in the direction of the Vector2. I'll know its working when I see enemies invisibly push each other apart as they clump together. 
