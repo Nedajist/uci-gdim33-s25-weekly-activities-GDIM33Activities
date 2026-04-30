@@ -50,3 +50,7 @@ Steps:
     1. Add a method to the enemy script which executes a physics circlecast and returns a list of all NPCs caught within it. I'll test this by running a debug.log on the returned list and by having enemies spawn close to each other. 
 	2. Create a method, which, when given a gameobject, creates a normalized vector2 pointing from the gameobject to the enemy NPC. I will debug.log the Vector2's to ensure that they are correct. 
 	3. Modify the previous method to make the vector2 apply a small force to the enemy in the direction of the Vector2. I'll know its working when I see enemies invisibly push each other apart as they clump together. 
+
+### Activity 2
+I have finished adding a healthbar shake method and have changed all of the healthbar gameobjects into a single healthbar prefab. When a player or non-boss NPC takes damage, their healthbar will shake, its scale increasing then decreasing. I've decided to not shake the healthbar upon receiving healing, as healing is received every frame. I can adjust the change in scale and the time it takes for the healthbar to grow and shrink for each NPC. 
+Enemy avoidance is also complete. Enemy mages, healers, and tanks will now avoid running into other characters if they get too close. Enemies only avoid characters who are not their current target. This works with multiple nearby NPCs in different directions. 
