@@ -43,10 +43,10 @@ Playtest Notes: The boss has too much health. One playtester did not even notice
 I have implemented my chosen Unity tool (scriptable objects) and all of my non-VFX vertical slice features, so I will work on improving enemy NPC behavior and presentation. 
 Steps:
 1. Make healthbar of enemies more responsive.
-	1a. Make a central healthbar prefab shared across all characters, instead of characters each having their own distinct healthbar gameobject. I will know it works if, after adding the prefabs to each character, the healthbars still function as before. 
-	1b. Add a black background behind each healthbar so the player can better visualize the amount of missing HP from an enemy. If I can see the black backgrounds behind each health bar, it works. 
-	1c. Make a coroutine which expands, then shrinks, the size of a healthbar when health changes. If I can see the healthbar scales changing while playing, its functional. 
+	1. Make a central healthbar prefab shared across all characters, instead of characters each having their own distinct healthbar gameobject. I will know it works if, after adding the prefabs to each character, the healthbars still function as before. 
+	2. Add a black background behind each healthbar so the player can better visualize the amount of missing HP from an enemy. If I can see the black backgrounds behind each health bar, it works. 
+	3. Make a coroutine which expands, then shrinks, the size of a healthbar when health changes. If I can see the healthbar scales changing while playing, its functional. 
 2. Make enemies avoid colliding into each other, which results in friendly-fire collision damage. 
-    2a. Add a method to the enemy script which executes a physics circlecast and returns a list of all NPCs caught within it. I'll test this by running a debug.log on the returned list and by having enemies spawn close to each other. 
-	2b. Create a method, which, when given a gameobject, creates a normalized vector2 pointing from the gameobject to the enemy NPC. I will debug.log the Vector2's to ensure that they are correct. 
-	2c. Modify the previous method to make the vector2 apply a small force to the enemy in the direction of the Vector2. I'll know its working when I see enemies invisibly push each other apart as they clump together. 
+    1. Add a method to the enemy script which executes a physics circlecast and returns a list of all NPCs caught within it. I'll test this by running a debug.log on the returned list and by having enemies spawn close to each other. 
+	2. Create a method, which, when given a gameobject, creates a normalized vector2 pointing from the gameobject to the enemy NPC. I will debug.log the Vector2's to ensure that they are correct. 
+	3. Modify the previous method to make the vector2 apply a small force to the enemy in the direction of the Vector2. I'll know its working when I see enemies invisibly push each other apart as they clump together. 
