@@ -72,4 +72,4 @@ Playtest notes: Even after nerfing the boss's health by almost 50%, no playteste
 
 3. I think the shader gets its UV values from the vertices of the mesh that it is attached to, or perhaps from a preset list of defaults. 
 
-4. It does sound interesting to me, as I think I'll be using shader graphs to create VFX for my vertical slice game. I don't think I want to exclusively focus on shader graphs in the future, but I'll definitely be using them in future projects. 
+4. It does sound interesting to me, as I think I'll be using shader graphs to create VFX for my vertical slice game. I don't think I want to exclusively focus on shader graphs in the future, but I'll definitely be using them in my next projects. 
