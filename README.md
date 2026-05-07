@@ -64,3 +64,12 @@ Each of the three original classes (square, triangle, circle) now have their sec
 Playtesting goals: I want to see if the reworked boss fight is significantly easier than the previous playtest fight while still providing a challenge to the player. I would also like to see if the new class abilities are interesting and intuitive, especially since the player will not receive a tutorial. If the boss is beatable, I will gauge its difficulty by finding out the average # of deaths it takes to defeat it. 
 
 Playtest notes: Even after nerfing the boss's health by almost 50%, no playtester was able to get the boss's health below half. Even after 20+ deaths (and thus 20+ past incarnations helping me via ghost replay), I was unable to get the boss's heathbar to reach 50%. I will continue nerfing it until the player can beat it within 30 deaths. However, all playtesters found the abilities to be enjoyable, and they were mostly understood without any explanation. 
+
+### Activity 2
+1. The multiply setting makes the resulting color darker, as the new RGB values will always be darker or as dark as the input color values. Since the RGB values are stored between 0-1 and a lower value means a darker color, unless both R, G, or B are set to 1 or 0, the resulting multiplication between two decimal values will always result in a smaller decimal value, which is a darker color.  
+
+2. The resulting a value will almost always be more translucent than either of the original values. As with blending RGB values, a-values are stored between 0-1, and smaller a-values means more translucence. Unless the two input a-values are 0 or 1, two decimals between 0-1 are multiplied against each other, always resulting in a smaller decimal and a more translucent shade. If both a-values are 0 or 1, the translucence won't change since 0 * 0 = 0 and 1 * 1 = 1.
+
+3. I think the shader gets its UV values from the vertices of the mesh that it is attached to, or perhaps from a preset list of defaults. 
+
+4. It does sound interesting to me, as I think I'll be using shader graphs to create VFX for my vertical slice game. I don't think I want to exclusively focus on shader graphs in the future, but I'll definitely be using them in future projects. 
