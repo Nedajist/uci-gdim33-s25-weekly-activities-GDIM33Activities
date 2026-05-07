@@ -54,3 +54,11 @@ Steps:
 ### Activity 2
 I have finished adding a healthbar shake method and have changed all of the healthbar gameobjects into a single healthbar prefab. When a player or non-boss NPC takes damage, their healthbar will shake, its scale increasing then decreasing. I've decided to not shake the healthbar upon receiving healing, as healing is received every frame. I can adjust the change in scale and the time it takes for the healthbar to grow and shrink for each NPC. 
 Enemy avoidance is also complete. Enemy mages, healers, and tanks will now avoid running into other characters if they get too close. Enemies only avoid characters who are not their current target. This works with multiple nearby NPCs in different directions. 
+
+## W6
+### Activity 1
+Each of the three original classes (square, triangle, circle) now have their second ability. Square can dash, triangle applies an AOE slow, and circle can summon a stationary turret. I added a fourth class, pentagon, with 2 abilities. It fires a projectile which pulls it and the target together and another projectile which pushes them apart. A character's healthbar now shakes when they receive damage. Enemies will now try to avoid colliding into each other. The boss's HP and attack patterns have been slightly reworked. 
+[Itch page link](https://omnomnom8.itch.io/v2)
+Playtesting goals: I want to see if the reworked boss fight is significantly easier than the previous playtest fight while still providing a challenge to the player. I would also like to see if the new class abilities are interesting and intuitive, especially since the player will not receive a tutorial. If the boss is beatable, I will gauge its difficulty by finding out the average # of deaths it takes to defeat it. 
+
+Playtest notes: Even after nerfing the boss's health by almost 50%, no playtester was able to get the boss's health below half. Even after 20+ deaths (and thus 20+ past incarnations helping me via ghost replay), I was unable to get the boss's heathbar to reach 50%. I will continue nerfing it until the player can beat it within 30 deaths. However, all playtesters found the abilities to be enjoyable, and they were mostly understood without any explanation. 
