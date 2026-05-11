@@ -63,6 +63,8 @@ Each of the three original classes (square, triangle, circle) now have their sec
 
 Playtesting goals: I want to see if the reworked boss fight is significantly easier than the previous playtest fight while still providing a challenge to the player. I would also like to see if the new class abilities are interesting and intuitive, especially since the player will not receive a tutorial. If the boss is beatable, I will gauge its difficulty by finding out the average # of deaths it takes to defeat it. 
 
+Playtesters: Kai, Nathan, Marcelo
+
 Playtest notes: Even after nerfing the boss's health by almost 50%, no playtester was able to get the boss's health below half. Even after 20+ deaths (and thus 20+ past incarnations helping me via ghost replay), I was unable to get the boss's heathbar to reach 50%. I will continue nerfing it until the player can beat it within 30 deaths. However, all playtesters found the abilities to be enjoyable, and they were mostly understood without any explanation. 
 
 ### Activity 2
