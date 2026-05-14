@@ -75,3 +75,14 @@ Playtest notes: Even after nerfing the boss's health by almost 50%, no playteste
 3. I think the shader gets its UV values from the vertices of the mesh that it is attached to, or perhaps from a preset list of defaults. 
 
 4. It does sound interesting to me, as I think I'll be using shader graphs to create VFX for my vertical slice game. I don't think I want to exclusively focus on shader graphs in the future, but I'll definitely be using them in my next projects. 
+
+## W7 
+### Activity 1
+1. The data for the Vertex Color node comes from the Vertice UV values in the shiba mesh. 
+2. The color on our shiba is blended at the edges due to interpolation; the colors of all of the areas in between vertices are blended based on their distance from each vertex. 
+3. The vertex color shiba is less detailed than the textured shiba because vertex color relies on the UV values stored in each shiba vertice, and because there are many more points on the shiba model than vertice points, the shiba relies heavily on interpolation to determine the colors of areas between vertice points. This blend is less precise than a texture, which covers every point on the shiba with a precise, unblended color. Vertex color is probably more useful for playtesting and games that use a high volume of models which need to optimize for efficiency. 
+4. There is a patch on the shiba's left leg which is colored light green but is surrounded by blues. The surface normals in that area appear to be facing in the wrong direction. 
+5. Position data can also be made into a debug shader. When applied, the developer can quickly tell whether or not a portion of a model is on a negative/positive x, y, or z axis and when the model changes axis. This might be useful in situations where the developer must keep track of the axis of many models at once, and relying on debug.log would result in too many simultaneous messages. 
+6. The surface normals for that area of the shiba are pointing in the wrong direction, facing away from the re-adjusted lighting direction rather than towards it. The dot product between two opposite-facing vectors is negative, and a negative value results in a darker color. This results in a dark patch on the shiba which faces towards the light. 
+7. I think we set the blending mode to additive in order to make the fire appear slightly brighter/glowing. Switching from alpha to additive seems to make the texture slightly more transparent and slightly lighter. 
+
