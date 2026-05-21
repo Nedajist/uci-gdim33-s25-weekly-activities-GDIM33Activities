@@ -86,3 +86,18 @@ Playtest notes: Even after nerfing the boss's health by almost 50%, no playteste
 6. The surface normals for that area of the shiba are pointing in the wrong direction, facing away from the re-adjusted lighting direction rather than towards it. The dot product between two opposite-facing vectors is negative, and a negative value results in a darker color. This results in a dark patch on the shiba which faces towards the light. 
 7. I think we set the blending mode to additive in order to make the fire appear slightly brighter/glowing. Switching from alpha to additive seems to make the texture slightly more transparent and slightly lighter. 
 
+## W8
+### Activity 1
+Playtest goals: After nerfing the boss's health by 50% and reducing the damage of its attacks and buffing a variety of player classes and abilities, my main goal is to figure out if the boss is still too overtuned. I also added my fifth and final class, a character with the ability to construct walls, and I want to see if playtesters can understand the ability with no tutorial.
+
+Playtesters: Ruichen, Alvin, Kai
+
+Playtest notes: Unfortunately, the boss remains undefeated. Its guarantee-hit AOE in its third phase still catches players off guard, and players didn't understand how the infection mechanic works. However, they were able to use the new class perfectly, and they got the boss to around 30% health. Given that most of the playtesters this round haven't seen my game before, I think that a more experienced tester can likely defeat the boss. 
+
+### Activity 2B
+1. The fraction node animates the shine effect by getting a time input and outputting its decimal value. Because the decimal value of time oscillates between 0 and 1, the fraction's output will cycle between 0 and 1. That value is then added to every pixel of the sprite's UV, and because higher UV values are closer to white, the fraction is adding a cyclical shine to the sprite's UV.
+2. The shine texture for the shader mus be black by default because we are adding a shine value to an un-shined texture. If the texture were already pure white, then it would already be shining at max brightness. Adding more to its UV would not change the texture at all, and we would not be able to darken it. 
+3. The building texture in the graph isn't applied to the sprites that use it because the building texture is stored in MainTex. Unity reserves the Texture2D property MainTex and overrides it with the sprite from the spriterenderer. The chest sprite overrides the building sprite.
+4. fraction(time * shinySpeed) ensures that the value added to the UV will be between 0-1. However, if shinySpeed is greater than 1, then shinySpeed * fraction(time) can result in values greater than 1 and larger values in general, since fraction isn't there to clamp the values at the end. This results in brighter UV values applied to the chest, making it become shiny faster and even shinier than intended.
+
+
