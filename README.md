@@ -88,7 +88,11 @@ Playtest notes: Even after nerfing the boss's health by almost 50%, no playteste
 
 ## W8
 ### Activity 1
-Playtest goals: After nerfing the boss's health by 50% and reducing the damage of its attacks and buffing a variety of player classes and abilities, my main goal is to figure out if the boss is still too overtuned. I also added my fifth and final class, a character with the ability to construct walls, and I want to see if playtesters can understand the ability with no tutorial.
+I've added bullet trail particles to every projectile as well as the square's dash. The fifth and final character class, the architect/painter, is now in the game. They can fire moving walls to block projectiles and enemies and build static walls using the mouse cursor. A zombie version of them is also functional. Finally, I've once more reworked the boss's stats and ability numbers, so hopefully it should be more balanced.
+
+[Itch page link](https://omnomnom8.itch.io/1-v3)
+
+Playtest goals: After nerfing the boss's health by 50% and reducing the damage of its attacks and buffing a variety of player classes and abilities, my main goal is to figure out if the boss is still too overtuned. I also want to see if playtesters can understand the new class's ability with no tutorial.
 
 Playtesters: Ruichen, Alvin, Kai
 
