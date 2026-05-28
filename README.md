@@ -112,10 +112,11 @@ Effect 1: Mario Kart Ink Debuff
 - I might activate the effect by enabling an entire post-processing effect and then using methods to instantiate inkblots at random coordinates. Once created, the inkblot shader graph will handle its shape and movement. 
 
 Effect 2: Mario Kart Star Power Up Cart Effect
-- This would effect an ObjectÅfs Material
+- This would effect an Object¬Åfs Material
 - This would be activated when players use a star power up
 - I believe that this involves multiplying the rainbow effect on top of the model of the player and their cart kind of like the shiba activity but instead of replacing the model it combines them. The rainbow effect would likely be drawn from a pre-made gradient texture. 
 
 ### Activity 2
+<img width="1022" height="563" alt="image" src="https://github.com/user-attachments/assets/a588276b-ec58-4319-bcd0-80e51300ae81" />
 I've been working on a shadergraph which, when applied to an opaque sprite, distorts the sprite's portion of the screen by having the sprite act like a chameleon. It copies the colors of that screen portion but with UV values warped by the shader. I plan to use it to make bubble/droplet effects, but currently the material is only applied to the player's mouse cursor. 
-The most significant problem was having the shader mimic what was already behind the sprite, since the easy solution of just linking a scene color node to base color is not supported by Unity 2D. Just figuring that out took a great deal of time, and afterwards I had to implement a convoluted workaround of using a camera layer instead, which involved creating an additional camera sorting layer and plenty of trial-and-error. 
+The most significant problem was having the shader mimic what was already behind the sprite, since the easy solution of just linking a scene color node to base color is not supported by Unity 2D. Just figuring that out took a great deal of time, and afterwards I had to implement a convoluted workaround of using a camera layer instead, which involved creating an additional camera sorting layer and plenty of trial-and-error. Everything that could break, did. At one point I ended up accidentally creating the a 2D version of the portal effect from Portal, where the sprite would display a miniature version of the screen (which displayed a miniature version of itself displaying a miniature version of the screen displaying itself). 
