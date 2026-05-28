@@ -104,4 +104,18 @@ Playtest notes: Unfortunately, the boss remains undefeated. Its guarantee-hit AO
 3. The building texture in the graph isn't applied to the sprites that use it because the building texture is stored in MainTex. Unity reserves the Texture2D property MainTex and overrides it with the sprite from the spriterenderer. The chest sprite overrides the building sprite.
 4. fraction(time * shinySpeed) ensures that the value added to the UV will be between 0-1. However, if shinySpeed is greater than 1, then shinySpeed * fraction(time) can result in values greater than 1 and larger values in general, since fraction isn't there to clamp the values at the end. This results in brighter UV values applied to the chest, making it become shiny faster and even shinier than intended.
 
+## W9
+### Activity 1
+Effect 1: Mario Kart Ink Debuff
+- This is a full-screen post-processing effect applied to the entire camera 
+- The shader involves applying temporary moving inkblot textures to the camera after the player gets attacked by a squid powerup
+- I might activate the effect by enabling an entire post-processing effect and then using methods to instantiate inkblots at random coordinates. Once created, the inkblot shader graph will handle its shape and movement. 
 
+Effect 2: Mario Kart Star Power Up Cart Effect
+- This would effect an ObjectÅfs Material
+- This would be activated when players use a star power up
+- I believe that this involves multiplying the rainbow effect on top of the model of the player and their cart kind of like the shiba activity but instead of replacing the model it combines them. The rainbow effect would likely be drawn from a pre-made gradient texture. 
+
+### Activity 2
+I've been working on a shadergraph which, when applied to an opaque sprite, distorts the sprite's portion of the screen by having the sprite act like a chameleon. It copies the colors of that screen portion but with UV values warped by the shader. I plan to use it to make bubble/droplet effects, but currently the material is only applied to the player's mouse cursor. 
+The most significant problem was having the shader mimic what was already behind the sprite, since the easy solution of just linking a scene color node to base color is not supported by Unity 2D. Just figuring that out took a great deal of time, and afterwards I had to implement a convoluted workaround of using a camera layer instead, which involved creating an additional camera sorting layer and plenty of trial-and-error. 
